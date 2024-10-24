@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- CSS para estilizar a página -->
+    <style>
+        body {
+            background-color: #000;
+            color: #FFF;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        p {
+            font-size: 5vw;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 8vw;
+            margin-top: 0;
+        }
+        .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+    margin-bottom: 40px;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+        .button {
+            background-color: #FF4500;
+            color: #FFF;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 5vw;
+            margin-top: 20px;
+        }
+        .accordion {
+            text-align: left;
+            margin: 20px auto;
+            width: 90%;
+        }
+        .accordion-item {
+            background: #333;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .accordion-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 5vw;
+        }
+        .accordion-item p {
+            margin: 0;
+            font-size: 4.5vw;
+        }
+        .accordion-item.active p {
+            display: block;
+        }
+        .accordion-item p {
+            display: none;
+        }
+
+        /* Responsividade para telas maiores, como desktops */
+        @media (min-width: 768px) {
+            p {
+                font-size: 22px;
+            }
+            h1 {
+                font-size: 37px;
+            }
+            .button {
+                font-size: 22px;
+            }
+            .accordion-item h3 {
+                font-size: 20px;
+            }
+            .accordion-item p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <p>A NOVA TENDÊNCIA DE 2025<br>ESTÁ EM SUAS MÃOS.</p>
+
+    <p><strong>TOP 1 🇧🇷 em Blackjack, te provo isso AO VIVO.</strong></p>
+
+    <p><strong>Assista o vídeo abaixo e aprenda ainda hoje como começar gratuitamente!</strong></p>
+
+    <!-- Vídeo embutido -->
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VfJmhwCrvDE" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Botão para ação -->
+    <a href="#" class="button">QUERO LUCRAR TAMBÉM!</a>
+
+    <!-- Seção de Perguntas Frequentes -->
+    <h1>PERGUNTAS FREQUENTES</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <h3>Como você tem uma assertividade tão alta?</h3>
+            <p>Utilizo de uma metodologia probabilística, sendo assim ao longo prazo sempre irei lucrar.</p>
+        </div>
+        <div class="accordion-item">
+            <h3>Qual a diferença do TIGRINHO pro BLACKJACK?</h3>
+            <p>Tigrinho, Roleta, Aviator e Slots em geral dependem apenas de sorte. Sendo assim, não é possível usar da probabilidade para prever resultados.</p>
+        </div>
+        <div class="accordion-item">
+            <h3>Quanto preciso investir? É gratuito?</h3>
+            <p>Sim, é gratuito. E você só precisa de uma BANCA (recomendo R$ 50, mas é possível começar com menos) para seguir minha metodologia.</p>
+        </div>
+        <div class="accordion-item">
+            <h3>Por que você divulga sua metodologia?</h3>
+            <p>Boa pergunta! Diferente de <strong>gurus vendedores de sonhos</strong>, eu vou te provar primeiro gratuitamente que tudo que faço realmente funciona. Depois, caso você queira, pode fazer parte do meu clube pago e alcançar o próximo nível deste mercado.</p>
+        </div>
+    </div>
+
+    <!-- Script para funcionalidade do acordeão (Perguntas Frequentes) -->
+    <script>
+        // Seleciona todos os itens do acordeão
+        const items = document.querySelectorAll('.accordion-item');
+
+        // Adiciona um evento de clique em cada item do acordeão
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                // Fecha todos os outros itens ativos
+                items.forEach(i => i.classList.remove('active'));
+                // Abre o item clicado
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
